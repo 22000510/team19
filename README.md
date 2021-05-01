@@ -1,4 +1,7 @@
 # team19
+
+![cafe](https://cdn.pixabay.com/photo/2015/10/12/15/14/coffee-984328__340.jpg)
+
 addCafe: 커피 메뉴 추가하기
 selectMenu: 기능 선택
 deleteCafe: 커피 메뉴 삭제
