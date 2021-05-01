@@ -2,7 +2,7 @@
 
 ![cafe](https://cdn.pixabay.com/photo/2015/10/12/15/14/coffee-984328__340.jpg)
 
-addCafe: 커피 메뉴 추가하기
+addCafe: 커피 메뉴 추가하기/n
 selectMenu: 기능 선택
 deleteCafe: 커피 메뉴 삭제
 selectCafe: 커피 메뉴 선택
