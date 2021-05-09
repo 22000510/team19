@@ -15,3 +15,5 @@ int selectdatano(manager *m, int count); // 제품번호 고르기 함수
 void readproduct(manager m);
 int updateCafe(manager *m);
 int deleteCafe(manager *m);
+int selectCafe(manager *m, int count);
+void addStar(manager *m);
