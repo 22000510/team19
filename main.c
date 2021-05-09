@@ -17,6 +17,31 @@ int main(void){
     else if(menu == 2){
       count += addCafe(&slist[index++]);
     }
+    else if(menu == 3){
+      int no = selectdatano(slist, index);
+      if(no>0) {
+        updateCafe(&slist[no-1]);
+      }
+      else {
+        printf("취소됨!\n");
+      }
+    }
+    else if(menu == 4){
+      int no = selectdatano(slist, index);
+      if(no>0){
+        printf("정말로 삭제하시겠습니까?(삭제:1) ");
+        int delok;
+        scanf("%d",&delok);
+        printf("\n");
+        if(delok == 1){
+          deleteCafe(&slist[no-1]);
+          count--;
+        }
+      }
+      else {
+        printf("취소됨!\n");
+      }
+    }
   }
   return 0;
 }
