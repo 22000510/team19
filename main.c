@@ -42,6 +42,19 @@ int main(void){
         printf("취소됨!\n");
       }
     }
+    else if (menu == 8) {
+      int order=selectCafe(slist, index);
+      readproduct(slist[order-1]);
+      printf("주문 완료!\n");
+    }
+    else if (menu == 9) {
+      int no=selectdatano(slist, index);
+      if (no==0) {
+        printf("취소됨!\n");
+        continue;
+      }
+      addStar(&slist[no-1]);
+    }
   }
   return 0;
 }
