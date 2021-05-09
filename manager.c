@@ -1,6 +1,6 @@
 #include "manager.h"
 int addCafe(manager *m){
-  printf("이름은?");
+  printf("이름은? ");
   scanf("%s",m->name);
   printf("가격은? ");
   scanf("%d",&m->price);
@@ -22,23 +22,37 @@ int selectmenu(){
   printf("7. 가격검색\n");
   printf("8. 별점검색\n");
   printf("0. 종료\n\n");
-  printf("=> 원하는 메뉴는?");
+  printf("=> 원하는 메뉴는? ");
   scanf("%d",&menu);
   return menu;
 }
 void listCafe(manager *m, int count){
   printf("\n Name price starpoint \n");
-  printf("===========================================\n");
+  printf("=================================\n");
   for(int i =0; i< count; i++){
   if(m[i].price==-1) continue;
   printf("%2d",i+1);
   readproduct(m[i]);}
-  printf("\n Name price starpoint \n");
 }
 int selectdatano(manager *m, int count){
   listCafe(m, count);
   int no;
-  printf("번호는(취소:0)?");
+  printf("번호는(취소:0)? ");
   scanf("%d",&no);
   return no;
+}
+int updateCafe(manager *m){
+  printf("이름은? ");
+  scanf("%s",m->name);
+  printf("가격은? ");
+  scanf("%d",&m->price);
+  printf("별점은? ");
+  scanf("%d",&m->starpoint);
+  printf("=>수정성공\n");
+  return 1;
+}
+int deleteCafe(manager *m){
+  m->price = -1;
+  m->starpoint = -1;
+  return 1;
 }
