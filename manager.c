@@ -25,7 +25,7 @@ printf("=> 원하는 메뉴는?");
 scanf("%d",&menu);
 return menu;
 }
-void listproduct(manager *m, int count){
+void listCafe(manager *m, int count){
 printf("\n Name price starpoint \n");
 printf("===========================================\n");
 for(int i =0; i< count; i++){
