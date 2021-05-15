@@ -15,7 +15,7 @@ void readproduct(manager m){
 }
 int selectmenu(){
   int menu;
-  printf("----- MENU -----");
+  printf("----- MENU -----\n");
   printf("1. 조회\n");
   printf("2. 추가\n");
   printf("3. 수정\n");
