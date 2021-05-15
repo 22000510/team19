@@ -46,6 +46,12 @@ int main(void){
     else if(menu == 5) {
       saveFile(slist, index);
     }
+    else if(menu == 6){
+      searchCafe(slist,index);
+    }
+    else if(menu == 7){
+      searchStar(slist,index);
+    }
     else if (menu == 8) {
       int order=selectCafe(slist, index);
       readproduct(slist[order-1]);
