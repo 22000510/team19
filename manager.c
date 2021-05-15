@@ -88,3 +88,39 @@ void saveFile(manager *m, int count){
   fclose(fp);
   printf("=> 저장됨!\n");
 }
+void searchStar(manager *m, int count){
+int scnt = 0;
+int search;
+printf("검색할 별점?");
+scanf("%d",&search);
+printf("\n Name   price   starpoint pointnum \n");
+printf("====================================\n");
+for(int i =0; i <count ; i++){
+if(m[i].price == -1) continue;
+if(m[i].starpoint== search){
+printf("%2d ", i+1);
+readproduct(m[i]);
+scnt++;
+}
+}
+if(scnt == 0) printf("=> 검색된 데이터 없음!");
+printf("\n");
+}
+void searchCafe(manager *m, int count){
+int scnt = 0;
+char search[20];
+printf("검색할 이름?");
+scanf("%s", search);
+printf("\n Name   price   weight  starpoint pointnum \n");
+printf("========================================\n");
+for(int i =0; i <count ; i++){
+if(m[i].price == -1) continue;
+if(strstr(m[i].name, search)){
+printf("%2d ", i+1);
+readproduct(m[i]);
+scnt++;
+}
+}
+if(scnt == 0) printf("=> 검색된 데이터 없음!");
+printf("\n");
+}
