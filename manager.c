@@ -78,3 +78,13 @@ void addStar(manager *m){
   m->pointnum++;
   m->starpoint/=m->pointnum;
 }
+void saveFile(manager *m, int count){
+  FILE *fp;
+  fp = fopen("cafe.txt", "wt");
+  for(int i=0; i < count; i++){
+    if(m[i].price == -1) continue;
+    fprintf(fp, "%s %5d %4d %4d\n", m[i].name, m[i].price, m[i].starpoint, m[i].pointnum);
+  }
+  fclose(fp);
+  printf("=> 저장됨!\n");
+}
