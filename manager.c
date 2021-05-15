@@ -124,3 +124,23 @@ scnt++;
 if(scnt == 0) printf("=> 검색된 데이터 없음!");
 printf("\n");
 }
+int readFile(manager *m){
+  int i = 0;
+  FILE *fp;
+  fp = fopen("cafe.txt", "rt");
+  if(fp == NULL)
+    printf("=> 파일 없음\n");
+  else{
+    printf("file exist");
+    for(; i < 100; i++){
+      fscanf(fp, "%s", m[i].name);
+      if(feof(fp)) break;
+      fscanf(fp, "%d", &m[i].price);
+      fscanf(fp, "%d", &m[i].starpoint);
+      fscanf(fp, "%d", &m[i].pointnum);
+    }
+    fclose(fp);
+    printf("=> 로딩 성공!\n");
+  }
+  return i;
+}
