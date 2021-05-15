@@ -42,6 +42,9 @@ int main(void){
         printf("취소됨!\n");
       }
     }
+    else if(menu == 5) {
+      saveFile(slist, index);
+    }
     else if (menu == 8) {
       int order=selectCafe(slist, index);
       readproduct(slist[order-1]);
