@@ -27,6 +27,8 @@ addStar: 별점 추가
 
 searchStar: 별점 검색
 
+saveFile: 파일 저장
+
 ### 팀소개 및 팀원이 맡은 역할
 송다빈: contributor(코드 생성 및 수정) Update, Delete 기능 구현
 
