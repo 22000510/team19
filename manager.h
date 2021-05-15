@@ -17,3 +17,4 @@ int updateCafe(manager *m);
 int deleteCafe(manager *m);
 int selectCafe(manager *m, int count);
 void addStar(manager *m);
+void saveFile(manager *m, int count);
