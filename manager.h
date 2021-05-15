@@ -20,3 +20,4 @@ void addStar(manager *m);
 void saveFile(manager *m, int count);
 void searchCafe(manager *m, int count);
 void searchStar(manager *m, int count);
+int readFile(manager *m);
