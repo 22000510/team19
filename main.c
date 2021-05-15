@@ -5,6 +5,7 @@
 int main(void){
   manager slist[100];
   int count = 0, index=0, menu;
+  count=readFile(slist);
   while(1){
     menu = selectmenu();
     if(menu == 0){
