@@ -15,11 +15,12 @@ void readproduct(manager m){
 }
 int selectmenu(){
   int menu;
+  printf("----- MENU -----");
   printf("1. 조회\n");
   printf("2. 추가\n");
   printf("3. 수정\n");
   printf("4. 삭제\n");
-  printf("5, 저장\n");
+  printf("5. 저장\n");
   printf("6. 이름검색\n");
   printf("7. 별점검색\n");
   printf("8. 메뉴선택\n");
@@ -52,7 +53,7 @@ int updateCafe(manager *m){
   scanf("%d",&m->price);
   printf("별점은? ");
   scanf("%d",&m->starpoint);
-  m->starpoint = -1;
+  m->pointnum = 1;
   printf("=>수정성공\n");
   return 1;
 }
